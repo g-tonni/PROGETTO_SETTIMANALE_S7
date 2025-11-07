@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Puzzle Shop - Backoffice</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="home.html"
+            ><i class="bi bi-puzzle fs-3 me-1"></i>
+            <p class="m-0">PuzzleShop</p></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="backoffice.html">Backoffice</a>
+              </li>
+            </ul>
+            <div>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                <i class="bi bi-cart2 fs-4"></i>
+                <span
+                  class="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 d-none"
+                  style="font-size: 12px"
+                  id="n-cart"
+                >
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow-1">
+      <div class="container">
+        <div class="row">
+          <!-- PRODOTTI PRESENTI -->
+          <div class="col col-12 col-md-4" id="shop-products">
+            <h1 class="mt-5 mb-4">Prodotti presenti</h1>
+          </div>
+          <!-- FORM PRODOTTO -->
+          <div class="col col-12 col-md-8">
+            <h1 class="text-center mt-5 mb-4">Inserisci un prodotto</h1>
+
+            <form
+              class="shadow p-4 rounded-3 border border-secondary-subtle position-sticky top-0"
+              id="form-product"
+            >
+              <div class="mb-3">
+                <label for="name" class="form-label">Nome prodotto</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="description" class="form-label"
+                  >Descrizione prodotto</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="description"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="brand" class="form-label">Brand</label>
+                <input type="text" class="form-control" id="brand" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="image" class="form-label">URL immagine</label>
+                <input type="text" class="form-control" id="image" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="price" class="form-label">Prezzo prodotto</label>
+                <input type="number" class="form-control" id="price" required />
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">SALVA</button>
+                <button type="button" class="btn btn-danger" id="reset-button">
+                  RESET
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center bg-dark text-light">
+      <p class="py-5 m-0">&copy PuzzleShop - <span id="year"></span></p>
+    </footer>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Il tuo carrello
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" id="cart-body"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/year.js"></script>
+    <script src="./scripts/backoffice.js"></script>
+    <script src="./scripts/cart.js"></script>
+  </body>
+</html>
