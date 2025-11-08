@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.card-home:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

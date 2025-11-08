@@ -39,8 +39,8 @@ const row = document.getElementById('row-product')
 
 const createCard = function (prod) {
   row.innerHTML += `
-  <div class="col col-12 col-md-4 col-lg-3">
-   <div class="card h-100">
+  <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+   <div class="card h-100 card-home">
      <div class="h-75">
         <img src="${prod.imageUrl}" class="card-img-top" alt="Puzzle">
      </div>

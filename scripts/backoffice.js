@@ -145,7 +145,7 @@ const createProd = function (prod) {
       </div>
        <div class="d-flex align-items-center justify-content-between w-100 mt-3">
          <button class="btn btn-primary" onclick="editProd('${prod._id}')">MODIFICA</button>
-         <button class="btn btn-danger" onclick="deleteProd('${prod._id}')">ELIMINA</button>
+         <button class="btn btn-danger" onclick="deleteProd('${prod._id}')" >ELIMINA</button>
        </div>
     </div>
     `
